@@ -1,4 +1,6 @@
 def GeneratorAB(lst, a, b):
+    if a > len(lst):
+        a = 0
     a = max(0, a)
     b = min(len(lst) - 1, b)
 
