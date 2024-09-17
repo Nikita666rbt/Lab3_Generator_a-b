@@ -2,8 +2,12 @@ def GeneratorAB(lst, a, b):
     a = max(0, a)
     b = min(len(lst) - 1, b)
 
-    for i in range(a, b + 1):
-        print(lst[i])
+    def generator(lst, a, b):
+        for i in range(a, b + 1):
+            yield lst[i]
+
+    for j in generator(lst, a, b):
+        print(j)
 
 lst = []
 n = int(input("Введите количество элементов в списке: "))
